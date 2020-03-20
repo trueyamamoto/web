@@ -13,7 +13,7 @@
   ?>
   <script>
     var js_json = <?php echo $php_json; ?>;
-    console.log(js_json["items"][0]["example"]); # refered value in the JSON data
+    console.log(js_json["items"][0]["example"]); // refered value in the JSON data
   </script>
 </head>
 <body>
