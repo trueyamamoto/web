@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <?php
-    $json_url = "URL"; # set URL for getting JSON data
+    $json_url = "URL"; # URL for getting JSON data
     $crl = curl_init();
     curl_setopt($crl, CURLOPT_URL, $json_url);
     curl_setopt($crl, CURLOPT_RETURNTRANSFER, 1);
