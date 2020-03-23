@@ -10,6 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
+# get data from webpage with webdriver and store them in lists
 opt = Options()
 opt.add_argument('--headless')
 opt.add_argument('--no-sandbox')
@@ -31,6 +32,8 @@ for elem in elems:
   img_list.append(elem.find_element_by_tag_name("img").get_attribute("src"))
 time.sleep(3)
 
+
+# create dictionary from list data
 dct = cl.OrderedDict()
 for i in range(len(title_list)):
   data = cl.OrderedDict()
@@ -39,10 +42,15 @@ for i in range(len(title_list)):
   dct[i] = data
 
 
+# write data to JSON file
 fw = open('jsonfile','w') # JSON filename
 json.dump(dct,fw,indent=4)
 
-driver.quit() # kill webdriver process at last
+
+# kill webdriver process at last
+driver.quit() 
+
+
 
 
 # functions for elements list
