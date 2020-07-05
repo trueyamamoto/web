@@ -1,0 +1,1 @@
+curl https://www.instagram.com/username/?__a=1 | awk -F '[("\"""_")]' '{print $7}'
