@@ -135,6 +135,7 @@ class TikTokIE(TikTokBaseIE):
 
         raise ExtractorError('Video not available', video_id=video_id)
 
+
 class TikTokUserIE(TikTokBaseIE):
     _VALID_URL = r'''(?x)
                         https?://
@@ -169,4 +170,3 @@ class TikTokUserIE(TikTokBaseIE):
             entry['extractor_key'] = TikTokIE.ie_key()
             entries.append(entry)
         return self.playlist_result(entries, user_id)
-
